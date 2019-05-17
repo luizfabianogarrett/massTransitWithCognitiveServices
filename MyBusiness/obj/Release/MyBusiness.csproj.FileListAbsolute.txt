@@ -1,0 +1,15 @@
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\MyBusiness.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\MyBusiness.pdb
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\GreenPipes.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\MassTransit.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\MassTransit.RabbitMqTransport.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\NewId.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\Newtonsoft.Json.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\RabbitMQ.Client.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\GreenPipes.xml
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\MassTransit.xml
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\MassTransit.RabbitMqTransport.xml
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\Newtonsoft.Json.xml
+C:\Projetos\PocMassTransit\Hello\MyBusiness\bin\Release\RabbitMQ.Client.xml
+C:\Projetos\PocMassTransit\Hello\MyBusiness\obj\Release\MyBusiness.dll
+C:\Projetos\PocMassTransit\Hello\MyBusiness\obj\Release\MyBusiness.pdb

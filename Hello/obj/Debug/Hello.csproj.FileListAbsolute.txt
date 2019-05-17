@@ -1,0 +1,17 @@
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\Hello.exe.config
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\Hello.exe
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\Hello.pdb
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\GreenPipes.dll
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\MassTransit.dll
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\MassTransit.RabbitMqTransport.dll
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\NewId.dll
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\RabbitMQ.Client.dll
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\GreenPipes.xml
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\MassTransit.xml
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\MassTransit.RabbitMqTransport.xml
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\Newtonsoft.Json.xml
+C:\Projetos\PocMassTransit\Hello\Hello\bin\Debug\RabbitMQ.Client.xml
+C:\Projetos\PocMassTransit\Hello\Hello\obj\Debug\Hello.csprojResolveAssemblyReference.cache
+C:\Projetos\PocMassTransit\Hello\Hello\obj\Debug\Hello.exe
+C:\Projetos\PocMassTransit\Hello\Hello\obj\Debug\Hello.pdb
