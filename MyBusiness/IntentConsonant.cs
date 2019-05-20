@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyBusiness
+﻿namespace MyBusiness
 {
-    public class IntentConsonant
+    public class IntentConsonant : IIntent
     { 
         public string Entity { get; set; }
+        public string AIm { get { return "Iam a Consonant " + Entity; } }
 
         public IntentConsonant()
         {
@@ -18,5 +13,6 @@ namespace MyBusiness
         {
             Entity = entity;
         }
+
     }
 }

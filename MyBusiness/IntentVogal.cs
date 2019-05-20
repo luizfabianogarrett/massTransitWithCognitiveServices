@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyBusiness
+﻿namespace MyBusiness
 {
-    public class IntentVogal
+    public class IntentVogal : IIntent
     { 
         public string Entity { get; set; }
+        public string AIm { get { return "Iam a Vogal " + Entity; } }
 
         public IntentVogal()
         {

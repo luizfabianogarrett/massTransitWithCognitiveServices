@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyBusiness
+﻿namespace MyBusiness
 {
-    public class None
+    public class None : IIntent
     { 
         public string Entity { get; set; }
-
+        public string AIm { get { return "Iam a thing " + Entity; } }
+        
         public None()
         {
         }

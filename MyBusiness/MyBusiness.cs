@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Web;
+using GreenPipes;
 
 namespace MyBusiness
 {
@@ -28,6 +29,7 @@ namespace MyBusiness
         public void Consummer()
         {
 
+   
             var bus = Bus.Factory.CreateUsingRabbitMq(sbc =>
             {
                 var host = sbc.Host(new Uri("rabbitmq://cbznjkyq:yGeXpmAZJ3cIw8xZ0Wu_5Vz4pCtTefhi@eagle.rmq.cloudamqp.com/cbznjkyq"), h =>
@@ -38,56 +40,20 @@ namespace MyBusiness
 
                 sbc.ReceiveEndpoint(host, "test_queue", ep =>
                 {
-                    ep.Handler<IntentConsonant>(context =>
+
+                    ep.PrefetchCount = 16;
+                    ep.UseMessageRetry(x => x.Interval(3, 10000));
+              
+
+                    ep.Handler<IIntent>(context =>
                     {
-                        return Console.Out.WriteLineAsync($"Received consoant: {context.Message.Entity}");
+                        Random x = new Random((int)DateTime.Now.Ticks);
+                        System.Threading.Thread.Sleep(x.Next(500, 10000));
+
+                        return Console.Out.WriteLineAsync($"Received : {context.Message.AIm}");
                     });
-                    ep.Handler<IntentVogal>(context =>
-                    {
-                        
-                        return Console.Out.WriteLineAsync($"Received vogal: {context.Message.Entity}");
-                    });
-                    ep.Handler<IntentDigit>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received Digit: {context.Message.Entity}");
-                    });
-                    ep.Handler<IntentSymbol>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received Symbol: {context.Message.Entity}");
-                    });
-                    ep.Handler<None>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received None: {context.Message.Entity}");
-                    });
+                 
                 });
-
-
-                sbc.ReceiveEndpoint(host, "test_queue_error", ep =>
-                {
-                    ep.Handler<IntentConsonant>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received consoant: {context.Message.Entity}");
-                    });
-                    ep.Handler<IntentVogal>(context =>
-                    {
-
-                        return Console.Out.WriteLineAsync($"Received vogal: {context.Message.Entity}");
-                    });
-                    ep.Handler<IntentDigit>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received Digit: {context.Message.Entity}");
-                    });
-                    ep.Handler<IntentSymbol>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received Symbol: {context.Message.Entity}");
-                    });
-                    ep.Handler<None>(context =>
-                    {
-                        return Console.Out.WriteLineAsync($"Received None: {context.Message.Entity}");
-                    });
-                });
-
-
 
 
             });
