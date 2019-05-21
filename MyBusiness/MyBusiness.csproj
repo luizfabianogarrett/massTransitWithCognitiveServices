@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consumer.cs" />
     <Compile Include="IIntent.cs" />
     <Compile Include="None.cs" />
     <Compile Include="IntentSymbol.cs" />

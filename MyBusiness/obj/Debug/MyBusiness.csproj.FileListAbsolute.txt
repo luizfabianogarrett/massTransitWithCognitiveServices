@@ -33,10 +33,6 @@ F:\Publica\Luiz.Garrett\PocMassTransit\Hello\MyBusiness\obj\Debug\MyBusiness.pdb
 C:\Projetos\PocMassTransit\Hello\MyBusiness\obj\Debug\MyBusiness.csprojAssemblyReference.cache
 C:\Projetos\PocMassTransit\Hello\MyBusiness\obj\Debug\MyBusiness.csproj.CoreCompileInputs.cache
 C:\Projetos\PocMassTransit\Hello\MyBusiness\obj\Debug\MyBusiness.csproj.CopyComplete
-C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.csprojAssemblyReference.cache
-C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.csproj.CoreCompileInputs.cache
-C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.dll
-C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.pdb
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\MyBusiness.dll.config
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\MyBusiness.dll
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\MyBusiness.pdb
@@ -58,4 +54,8 @@ C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\Newtonsoft.Jso
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\Newtonsoft.Json.Bson.xml
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\RabbitMQ.Client.xml
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\bin\Debug\System.ValueTuple.xml
+C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.csproj.CoreCompileInputs.cache
 C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.csproj.CopyComplete
+C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.dll
+C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.pdb
+C:\Projetos\massTransitWithCognitiveServices\MyBusiness\obj\Debug\MyBusiness.csprojAssemblyReference.cache

@@ -54,6 +54,7 @@ C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\Newtonsoft.Json.dll
 C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\RabbitMQ.Client.dll
 C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\System.ValueTuple.dll
 C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\MyBusiness.pdb
+C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\MyBusiness.dll.config
 C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\GreenPipes.xml
 C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\MassTransit.xml
 C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\MassTransit.RabbitMqTransport.xml
@@ -68,4 +69,3 @@ C:\Projetos\massTransitWithCognitiveServices\Hello\obj\Debug\HelloPublish.csproj
 C:\Projetos\massTransitWithCognitiveServices\Hello\obj\Debug\HelloPublish.csproj.CopyComplete
 C:\Projetos\massTransitWithCognitiveServices\Hello\obj\Debug\Hello.exe
 C:\Projetos\massTransitWithCognitiveServices\Hello\obj\Debug\Hello.pdb
-C:\Projetos\massTransitWithCognitiveServices\Hello\bin\Debug\MyBusiness.dll.config

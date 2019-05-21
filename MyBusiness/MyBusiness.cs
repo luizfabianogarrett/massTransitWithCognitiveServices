@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Web;
 using GreenPipes;
+using System.Threading.Tasks;
 
 namespace MyBusiness
 {
@@ -28,8 +29,6 @@ namespace MyBusiness
 
         public void Consummer()
         {
-
-   
             var bus = Bus.Factory.CreateUsingRabbitMq(sbc =>
             {
                 var host = sbc.Host(new Uri("rabbitmq://cbznjkyq:yGeXpmAZJ3cIw8xZ0Wu_5Vz4pCtTefhi@eagle.rmq.cloudamqp.com/cbznjkyq"), h =>
@@ -38,26 +37,33 @@ namespace MyBusiness
                     h.Password("yGeXpmAZJ3cIw8xZ0Wu_5Vz4pCtTefhi");
                 });
 
-                sbc.ReceiveEndpoint(host, "test_queue", ep =>
+                sbc.ReceiveEndpoint(host, "publish.queue", ep =>
+                {
+                    ep.PrefetchCount = 16;
+                    ep.UseMessageRetry(x => x.Interval(3, 10000));
+                    ep.Consumer<Consumer>();
+                });
+
+                /*sbc.ReceiveEndpoint(host, "send.queue", ep =>
                 {
 
                     ep.PrefetchCount = 16;
                     ep.UseMessageRetry(x => x.Interval(3, 10000));
-              
+                    ep.Consumer<Consumer>();
 
                     ep.Handler<IIntent>(context =>
                     {
                         Random x = new Random((int)DateTime.Now.Ticks);
-                        System.Threading.Thread.Sleep(x.Next(500, 10000));
+                        System.Threading.Thread.Sleep(x.Next(500, 1000));
 
-                        return Console.Out.WriteLineAsync($"Received : {context.Message.AIm}");
+                        return Console.Out.WriteLineAsync($"Received Method Sender: {context.Message.AIm}");
                     });
-                 
-                });
+
+                });*/
 
 
             });
-            
+
             bus.Start();
         }
 
@@ -82,9 +88,22 @@ namespace MyBusiness
 
             var assemblyName = string.Format("MyBusiness.{0}, MyBusiness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", result.topScoringIntent.intent);
             var type = Type.GetType(assemblyName);
-            var instance =  Activator.CreateInstance(type, new List<string> { string.Format("{0} Score: {1}", result.query, result.topScoringIntent.score) }.ToArray());
+            var instance = Activator.CreateInstance(type, new List<string> { string.Format("{0} Score: {1}", result.query, result.topScoringIntent.score) }.ToArray());
 
             bus.Publish(instance);
+
+        }
+
+        public void Sender(object obj)
+        {
+
+            string rabbitMqQueue = "send.queue";
+
+            Task<ISendEndpoint> sendEndpointTask = bus.GetSendEndpoint(new Uri(string.Concat("rabbitmq://cbznjkyq:yGeXpmAZJ3cIw8xZ0Wu_5Vz4pCtTefhi@eagle.rmq.cloudamqp.com/cbznjkyq", "/", rabbitMqQueue)));
+
+            ISendEndpoint sendEndpoint = sendEndpointTask.Result;
+
+            Task sendTask = sendEndpoint.Send(obj);
         }
     }
 }
